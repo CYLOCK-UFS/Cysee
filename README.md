@@ -1,5 +1,7 @@
 # Cysee
 
+![Logo Cysee](assets/logo.jpeg)
+
 **Cysee** é um projeto open source de monitoramento de eventos de rede, desenvolvido pela Liga Acadêmica de Cibersegurança Cylock, da Universidade Federal de Sergipe (UFS).
 
 O primeiro objetivo é validar, em laboratório, a coleta de traps SNMP, o armazenamento confiável na unidade monitorada e a entrega dos eventos a um painel central — sem perder nem duplicar eventos depois que foram gravados localmente.
