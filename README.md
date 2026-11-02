@@ -124,7 +124,7 @@ Ao encontrar uma vulnerabilidade, evite publicar detalhes exploráveis em uma is
 
 ## Licença
 
-A licença open source ainda não foi definida neste repositório. Até que um arquivo `LICENSE` seja publicado, não presuma permissão de uso, modificação ou redistribuição do código e dos materiais.
+Este projeto está licenciado sob a licença [MIT](LICENSE).
 
 ## Créditos
 
