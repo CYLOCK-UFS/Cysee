@@ -1,7 +1,7 @@
 use std::env;
 use std::fs::{OpenOptions, read_to_string, write};
 use std::io::{Read, Write};
-use std::net::{TcpStream, UdpSocket};
+use std::net::{Shutdown, TcpStream, UdpSocket};
 use std::thread;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
@@ -29,7 +29,9 @@ fn main() {
                         Duration::from_secs(2),
                     ) {
                         Ok(mut stream) => {
-                            if stream.write_all(content.as_bytes()).is_ok() {
+                            if stream.write_all(content.as_bytes()).is_ok()
+                                && stream.shutdown(Shutdown::Write).is_ok()
+                            {
                                 let mut resp = [0u8; 16];
                                 if let Ok(n) = stream.read(&mut resp) {
                                     if &resp[..n] == b"ACK" {
